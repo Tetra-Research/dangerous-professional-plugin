@@ -1,0 +1,25 @@
+{
+  "name": "dangerous-professional",
+  "version": "1.0.0",
+  "description": "Strategic professional communication skill implementing patio11's Dangerous Professional framework. Helps write firm, specific, rights-aware correspondence for disputes with banks, insurers, contractors, landlords, employers, government agencies, and other institutions.",
+  "author": {
+    "name": "tobthecreator",
+    "url": "https://github.com/tobthecreator"
+  },
+  "repository": "https://github.com/tobthecreator/dangerous-professional-plugin",
+  "license": "MIT",
+  "keywords": ["communication", "negotiation", "dispute", "professional", "patio11"],
+  "skills": "./codex-skills/",
+  "interface": {
+    "displayName": "Dangerous Professional",
+    "shortDescription": "Strategic professional correspondence using patio11's framework",
+    "longDescription": "Implements Patrick McKenzie's Dangerous Professional framework for writing firm, specific, rights-aware correspondence when dealing with institutions. Interview-driven workflow that reads your documents, identifies leverage, and drafts communications grounded in the institution's own records.",
+    "category": "Writing",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "Help me write a dispute letter to my bank",
+      "I need to respond to an insurance denial",
+      "Draft a professional email to my contractor"
+    ]
+  }
+}

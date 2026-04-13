@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dangerous Professional"
+  short_description: "Strategic professional correspondence"
+  default_prompt: "Use $dangerous-professional to draft a dispute letter"

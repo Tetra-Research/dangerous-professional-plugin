@@ -1,6 +1,6 @@
 # Dangerous Professional Plugin
 
-A Claude Code plugin implementing Patrick McKenzie's (patio11) [Dangerous Professional](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/) framework for strategic professional communication.
+A plugin for **Claude Code** and **Codex CLI** implementing Patrick McKenzie's (patio11) [Dangerous Professional](https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/) framework for strategic professional communication.
 
 > "Memetically, being a Dangerous Professional means communicating in what might be a slightly adversarial context in a way which suggests that a bureaucracy take one's concerns seriously and escalate them to someone empowered to resolve them swiftly." — [@patio11](https://x.com/patio11/status/1162561822248992768)
 
@@ -19,18 +19,30 @@ It doesn't generate templates. It runs an interview-driven workflow that:
 
 ## Installation
 
-Add this plugin to your Claude Code configuration:
+### Claude Code
 
 ```bash
 claude plugin add tobthecreator/dangerous-professional-plugin
+```
+
+### Codex CLI
+
+```bash
+codex plugin install tobthecreator/dangerous-professional-plugin
 ```
 
 ## Usage
 
 The skill triggers automatically when you describe a dispute with an institution. You can also invoke it explicitly:
 
+**Claude Code:**
 ```
 /dangerous-professional
+```
+
+**Codex CLI:**
+```
+$dangerous-professional
 ```
 
 For best results, have your documents ready — contracts, invoices, letters, emails, denial notices. The strongest Dangerous Professional move is citing the institution's own records back to them.
@@ -58,6 +70,22 @@ This plugin packages the strategic communication framework developed by [Patrick
 - His ongoing Twitter threads on the Dangerous Professional concept
 
 This is a community project with no affiliation to Patrick McKenzie or Stripe.
+
+## Project Structure
+
+```
+.claude-plugin/plugin.json          # Claude Code manifest
+.codex-plugin/plugin.json           # Codex CLI manifest
+skills/dangerous-professional/      # Claude Code skill
+  SKILL.md
+  references/                       # Shared reference files (source of truth)
+codex-skills/dangerous-professional/ # Codex CLI skill
+  SKILL.md
+  agents/openai.yaml
+  references -> symlink to shared
+```
+
+The five reference files (principles, tone guide, escalation paths, examples, gotchas) are shared between both platforms. The SKILL.md files differ only in frontmatter format and path conventions.
 
 ## Contributing
 
