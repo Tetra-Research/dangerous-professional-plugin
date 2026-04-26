@@ -14,13 +14,6 @@ jobs:
       - name: Install PyYAML
         run: pip install pyyaml
 
-      - name: Validate JSON manifests
-        run: |
-          for f in .claude-plugin/plugin.json .claude-plugin/marketplace.json .codex-plugin/plugin.json; do
-            echo "→ $f"
-            python3 -c "import json,sys; json.load(open('$f'))"
-          done
-
       - name: Validate YAML files
         run: |
           python3 -c "

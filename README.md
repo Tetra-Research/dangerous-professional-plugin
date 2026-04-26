@@ -40,15 +40,6 @@ npx skills remove dangerous-professional
 
 `npx skills` is the [vercel-labs/skills](https://github.com/vercel-labs/skills) CLI — the de facto package manager for agent skills.
 
-### Alternative: Claude Code marketplace
-
-If you prefer Claude Code's native plugin marketplace flow:
-
-```
-/plugin marketplace add tobthecreator/dangerous-professional-plugin
-/plugin install dangerous-professional
-```
-
 ## Usage
 
 The skill triggers automatically when you describe a dispute with an institution. You can also invoke it explicitly:
@@ -98,8 +89,6 @@ skills/dangerous-professional/
     gotchas.md       # Failure modes to check drafts against
   agents/
     openai.yaml      # Codex UI metadata
-.claude-plugin/      # Claude Code plugin manifests (alternative install path)
-.codex-plugin/       # Codex CLI plugin manifest (aspirational)
 ```
 
 ## Attribution

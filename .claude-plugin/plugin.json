@@ -1,6 +1,0 @@
-{
-  "name": "dangerous-professional",
-  "version": "1.0.0",
-  "description": "Strategic professional communication skill implementing patio11's Dangerous Professional framework. Helps write firm, specific, rights-aware correspondence for disputes with banks, insurers, contractors, landlords, employers, government agencies, and other institutions.",
-  "skills": "./skills/"
-}
