@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dangerous Professional — write letters bureaucracies take seriously</title>
+    <meta
+      name="description"
+      content="A skill for writing firm, specific, rights-aware correspondence to banks, insurers, landlords, employers, and any other institution."
+    />
+    <meta property="og:title" content="Dangerous Professional" />
+    <meta
+      property="og:description"
+      content="A skill for writing firm, specific, rights-aware correspondence to banks, insurers, landlords, employers, and any other institution."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%89%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="badges">
+          <span>Universal</span>
+          <span>Open Source</span>
+          <span>30+ Agents</span>
+        </div>
+
+        <h1>Dangerous Professional</h1>
+
+        <p class="tagline">
+          A skill for writing correspondence that bureaucracies take seriously.
+        </p>
+
+        <div class="install">
+          <code id="install-cmd">npx skills add Tetra-Research/dangerous-professional-plugin</code>
+          <button type="button" id="copy-btn" aria-label="Copy install command">Copy</button>
+        </div>
+
+        <nav class="links">
+          <a href="https://github.com/Tetra-Research/dangerous-professional-plugin">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/">The framework</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://x.com/patio11">@patio11</a>
+        </nav>
+
+        <p class="footnote">
+          Implements <a href="https://x.com/patio11">Patrick McKenzie</a>'s Dangerous Professional framework.
+          Reads your documents, finds your leverage, drafts the letter.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const btn = document.getElementById("copy-btn");
+      const cmd = document.getElementById("install-cmd").textContent;
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(cmd);
+          btn.textContent = "Copied";
+          setTimeout(() => (btn.textContent = "Copy"), 1500);
+        } catch {
+          btn.textContent = "Copy failed";
+        }
+      });
+    </script>
+  </body>
+</html>

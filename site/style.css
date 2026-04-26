@@ -1,0 +1,185 @@
+:root {
+  --bg: #0b0b0c;
+  --fg: #ededed;
+  --muted: #8a8a8f;
+  --border: #232326;
+  --accent: #f5d264;
+  --code-bg: #141416;
+  --link: #ededed;
+  --link-hover: #f5d264;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(245, 210, 100, 0.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 110%, rgba(245, 210, 100, 0.04), transparent 70%);
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+}
+
+.hero {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.badges span {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+h1 {
+  font-family: var(--mono);
+  font-size: clamp(36px, 6.5vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  line-height: 1.05;
+  color: var(--fg);
+}
+
+.tagline {
+  font-size: clamp(17px, 2.2vw, 20px);
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+
+.install {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 14px;
+  margin-bottom: 28px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.install code {
+  padding: 12px 16px;
+  color: var(--fg);
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.install code::-webkit-scrollbar {
+  display: none;
+}
+
+.install button {
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  border-left: 1px solid var(--border);
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.install button:hover {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.links a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--link-hover);
+}
+
+.links span {
+  color: var(--border);
+}
+
+.footnote {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.footnote a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
+.footnote a:hover {
+  color: var(--fg);
+}
+
+@media (max-width: 520px) {
+  .install {
+    font-size: 12px;
+  }
+  .install code {
+    padding: 10px 12px;
+  }
+  .install button {
+    padding: 0 12px;
+  }
+}

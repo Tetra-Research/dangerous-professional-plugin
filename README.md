@@ -1,6 +1,6 @@
 # Dangerous Professional
 
-[![validate](https://github.com/tobthecreator/dangerous-professional-plugin/actions/workflows/validate.yml/badge.svg)](https://github.com/tobthecreator/dangerous-professional-plugin/actions/workflows/validate.yml)
+[![validate](https://github.com/Tetra-Research/dangerous-professional-plugin/actions/workflows/validate.yml/badge.svg)](https://github.com/Tetra-Research/dangerous-professional-plugin/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A skill that helps you write firm, specific, rights-aware correspondence when dealing with institutions — banks, insurance companies, contractors, landlords, employers, government agencies, medical providers, collections agencies, or any bureaucracy.
@@ -14,7 +14,7 @@ Implements Patrick McKenzie's ([@patio11](https://x.com/patio11)) [Dangerous Pro
 One command, works across **Claude Code, Codex CLI, Cursor, Windsurf, Cline, Continue, Copilot, Gemini CLI, OpenCode, Goose, Amp, Roo, Trae, Warp**, and ~30 more agents:
 
 ```bash
-npx skills add tobthecreator/dangerous-professional-plugin
+npx skills add Tetra-Research/dangerous-professional-plugin
 ```
 
 The installer auto-detects which agents you have installed and asks which to configure. Files land in your agent's native skill directory (`.claude/skills/`, `.cursor/skills/`, `.codex/skills/`, etc.).
@@ -23,13 +23,13 @@ The installer auto-detects which agents you have installed and asks which to con
 
 ```bash
 # Install globally (user-level) instead of per-project
-npx skills add tobthecreator/dangerous-professional-plugin -g
+npx skills add Tetra-Research/dangerous-professional-plugin -g
 
 # Target specific agents only
-npx skills add tobthecreator/dangerous-professional-plugin --agent claude-code cursor
+npx skills add Tetra-Research/dangerous-professional-plugin --agent claude-code cursor
 
 # Install everywhere, no prompts
-npx skills add tobthecreator/dangerous-professional-plugin --all
+npx skills add Tetra-Research/dangerous-professional-plugin --all
 
 # Update later
 npx skills update dangerous-professional
